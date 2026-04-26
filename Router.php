@@ -36,7 +36,7 @@ class Router
         $this->registerRoute('GET', $uri, 
         $controller);
     }
-     
+
     /**
      * Add POST route
      * 
@@ -109,7 +109,7 @@ class Router
             }
             
         }
-        
+        $this->error_log(404);
     }
 
 }
