@@ -9,13 +9,14 @@ function basePath($path = '')
  * @param string $name
  * @return void
  */
-function loadView($name){
-    require basePath("Views/{$Partials[$name]}.view.php");
-    $partialPath = basePath("Views/Partials/{$name}.php");
-    if(file_exists($partialPath)){
-        require $partialPath;
-    }else{
-        echo "Partial {$name} not found.";
-    }   
+function loadView($name)
+{
+    $viewPath = basePath("Views/{$name}.view.php");
+
+    if (file_exists($viewPath)) {
+        require $viewPath;
+    } else {
+        echo "View {$name} not found.";
+    }
 }
 ?>
