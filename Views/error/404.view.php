@@ -9,8 +9,8 @@ if (!function_exists('loadPartials')) {
 }
 
 loadPartials ('head');
-loadPartials ('topbanner');
-loadPartials ('footer');
+loadPartials ('navbar');
+loadPartials ('top-banner');
 
 ?>
 <!-- Top Banner -->

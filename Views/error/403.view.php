@@ -1,6 +1,17 @@
-<?= loadPartials('head'); ?>
-<?= loadPartials('navbar'); ?>
-<?= loadPartials('top-banner'); ?>
+<?php
+if (!function_exists('loadPartials')) {
+    function loadPartials($partial) {
+        $path = __DIR__ . '/partials/' . $partial . '.php';
+        if (file_exists($path)) {
+            include $path;
+        }
+    }
+}
+
+loadPartials('head');
+loadPartials('navbar');
+loadPartials('top-banner');
+?>
 
 <section>
     <div class="container mx-auto p-4 mt-4">

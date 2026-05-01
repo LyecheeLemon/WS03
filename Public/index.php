@@ -1,24 +1,15 @@
-<?php
-// define('BASE_PATH', dirname(__DIR__));
-    // require basePath('helpers.php');
-    
-    require '../helpers.php';
-    // require basePath('views/home.view.php');
-    // loadView('home');
-    require basePath('Router.php');
+<?php 
 
-    $router = new Router();
+require '../helpers.php';
+require basePath('Router.php');
+require basePath('Database.php');
+$config = require basePath('config/db.php');
+$db = new Database($config);
 
-    $routes = require basePath('routes.php');
+$router = new Router();
+$routes = require basePath('routes.php');
+$uri = $_SERVER['REQUEST_URI']; // unifrom resource identifier
+$method = $_SERVER['REQUEST_METHOD'];
 
-    $uri = $_SERVER['REQUEST_URI']; //uniform resource identifier
-
-    $method = $_SERVER['REQUEST_METHOD'];
-
-    $router->route($uri, $method);
-    
-    
-    
-   
-
-    
+$router->route($uri, $method);
+?>

@@ -10,9 +10,7 @@ if (!function_exists('loadPartials')) {
 
 loadPartials ('head');
 loadPartials ('navbar');
-loadPartials ('topbanner');
-loadPartials ('bottombanner');
-loadPartials ('footer');
+loadPartials ('top-banner');
 
 ?>
 <!DOCTYPE html>
@@ -206,7 +204,11 @@ loadPartials ('footer');
         </div>
       </section>
 
-     
-     
+      
   </body>
 </html>
+
+<?php
+loadPartials ('bottombanner');
+loadPartials ('footer');
+?>

@@ -3,6 +3,12 @@ function basePath($path = '')
 {
     return __DIR__ . '/' . $path;
 }
+
+function baseUrl($path = '')
+{
+    return '/ITWS03/public' . $path;
+}
+
 /**
  * load a view
  * 
@@ -18,5 +24,12 @@ function loadView($name)
     } else {
         echo "View {$name} not found.";
     }
+}
+
+function inspect($value)
+{
+    echo '<pre>';
+    var_dump($value);
+    echo '</pre>';
 }
 ?>

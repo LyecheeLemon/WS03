@@ -10,11 +10,8 @@ if (!function_exists('loadPartials')) {
 
 loadPartials ('head');
 loadPartials ('navbar');
-loadPartials ('showcase');
-loadPartials ('topbanner');
-loadPartials ('bottombanner');
-loadPartials ('footer');
-
+loadPartials ('showcase-search');
+loadPartials ('top-banner');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -215,3 +212,9 @@ loadPartials ('footer');
      
   </body>
 </html>
+
+<?php
+loadPartials ('bottombanner');
+loadPartials ('footer');
+
+?>
