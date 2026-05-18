@@ -1,0 +1,16 @@
+{
+    "name": "lyecheelemon/ws03",
+    "description": "Job seeker application",
+    "authors": [
+        {
+            "name": "Lhaiza Mari Kim Ambos",
+            "email": "amboslhaiza@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\": "App/"
+        }
+    }
+}
